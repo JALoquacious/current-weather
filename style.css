@@ -1,0 +1,170 @@
+html {
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffbb6d+0,1a003f+100 */
+    background: rgb(255, 187, 109);
+    /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(255, 187, 109, 1) 0%, rgba(26, 0, 63, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(255, 187, 109, 1) 0%, rgba(26, 0, 63, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(255, 187, 109, 1) 0%, rgba(26, 0, 63, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffbb6d', endColorstr='#1a003f', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+}
+
+label {
+    margin: 1em;
+    cursor: pointer;
+    display: inline;
+}
+
+input {
+    border-color: black;
+    border-style: solid;
+    border-width: .3em;
+}
+
+h1 {
+    /font-size: 2vmax;
+}
+
+p {
+    /font-size: 1.2vmax;
+}
+
+label {
+    /font-size: 1.2vmax;
+}
+
+ul {
+    text-align: left;
+}
+
+ul a {
+    color: white;
+    text-shadow: -.05em -.05em black;
+}
+
+li {
+    /font-size: 1.2vmax;
+    padding: .5em;
+}
+
+.container {
+    border-color: black;
+    border-style: solid;
+    border-width: .3em;
+    text-align: center;
+    text-shadow: -.2em -.2em black;
+    margin: 0 auto;
+    margin-top: 5%;
+    max-width: 80vmin;
+    padding: .5em;
+    color: white;
+    background-color: #333333;
+    box-shadow: inset 0 0 20px #666, inset 0 0 20px #666, inset 0 0 20px #666;
+    opacity: .80;
+    /* Standard: FF gt 1.5, Opera, Safari, CSS3 */
+    filter: alpha(opacity=80);
+    /* IE lt 8 */
+    -ms-filter: "alpha(opacity=80)";
+    /* IE 8 */
+    -khtml-opacity: .80;
+    /* Safari 1.x */
+    -moz-opacity: .80;
+    /* FF lt 1.5, Netscape */
+}
+
+.radio {
+    width: 1.2em;
+    height: 1.2em;
+    cursor: pointer;
+}
+
+.toggle {
+    font-weight: 700;
+    width: 2em;
+    margin-left: -95%;
+    background-color: white;
+    border-color: black;
+    border-width: .3em;
+    border-style: solid;
+    border-radius: 100%;
+}
+
+.toggle:hover {
+    cursor: pointer;
+    color: white;
+    background-color: black;
+}
+
+#init_div {
+    text-align: center;
+}
+
+#init-icon {
+    width: 50vmin;
+    position: relative;
+}
+
+#init-text {
+    color: white;
+    position: relative;
+    font-size: 2em;
+    text-shadow: -.1em -.1em black;
+}
+
+#temp {
+    font-size: 5vmax;
+}
+
+#icon {
+    width: 60%;
+}
+
+#compass {
+    width: 50%;
+}
+
+#search_div {
+    max-width: 50vmin;
+}
+
+#search {
+    width: 45vmin;
+}
+
+#stats td {
+    width: 50%;
+    text-align: center;
+    color: white;
+    border-style: hidden;
+    padding: .5em;
+}
+
+#units {
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    border-style: hidden;
+    padding: .5em;
+}
+
+#submit {
+    font-weight: 700;
+    color: black;
+    background-color: white;
+    max-width: 50%;
+}
+
+#submit:hover {
+    cursor: pointer;
+    border-color: black;
+    color: white;
+    background-color: black;
+}
