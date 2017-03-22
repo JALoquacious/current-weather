@@ -1,3 +1,5 @@
+/*------------------- TAGS -------------------*/
+
 html {
     min-height: 100%;
 }
@@ -29,18 +31,6 @@ input {
     border-width: .3em;
 }
 
-h1 {
-    /font-size: 2vmax;
-}
-
-p {
-    /font-size: 1.2vmax;
-}
-
-label {
-    /font-size: 1.2vmax;
-}
-
 ul {
     text-align: left;
 }
@@ -51,9 +41,11 @@ ul a {
 }
 
 li {
-    /font-size: 1.2vmax;
     padding: .5em;
 }
+
+
+/*------------------- CLASSES -------------------*/
 
 .container {
     border-color: black;
@@ -62,7 +54,7 @@ li {
     text-align: center;
     text-shadow: -.2em -.2em black;
     margin: 0 auto;
-    margin-top: 5%;
+    margin-top: 3%;
     max-width: 80vmin;
     padding: .5em;
     color: white;
@@ -102,6 +94,9 @@ li {
     color: white;
     background-color: black;
 }
+
+
+/*------------------- IDS -------------------*/
 
 #init_div {
     text-align: center;
