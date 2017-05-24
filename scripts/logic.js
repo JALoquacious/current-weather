@@ -5,7 +5,6 @@ $(document).ready(function () {
     //-----------------------------------------------------------------------\\
     var cTemp,
         condition,
-        category,
         address,
         latitude,
         longitude,
@@ -94,10 +93,11 @@ $(document).ready(function () {
                         'West',
                         'Northwest'],
             // if degrees > 360, reset angle at zero
-            angle    = Math.round(windDir % 360 / 45),
+            angle = Math.round(windDir % 360 / 45),
             // if angle undefined, default to zero
             // (compass must display a direction)
-            rotate   = 'rotate(' + (angle || 0) * 45 + 'deg)';
+            rotate = 'rotate(' + (angle || 0) * 45 + 'deg)';
+        
         $('#compass').css({
             '-webkit-transform' : rotate,
             '-moz-transform'    : rotate,
@@ -147,10 +147,10 @@ $(document).ready(function () {
     //-----------------------------------------------------------------------\\
     function loadBackground() {
         var scene;
-        if (['Fog', 'Mist', 'Haze'].indexOf(category) > -1) {
+        if (['Fog', 'Mist', 'Haze'].indexOf(condition) > -1) {
             scene = background.mist[randomize(4)];
         }
-        else if (['Rain', 'Thunderstorm'].indexOf(category) > -1) {
+        else if (['Rain', 'Thunderstorm'].indexOf(condition) > -1) {
             scene = background.rain[randomize(4)];
         }
         else {
@@ -208,7 +208,6 @@ $(document).ready(function () {
     function setWeather(data) {
         console.log("weather data:", data);
         icon      = data.weather[0].icon;
-        category  = data.weather[0].main;
         cTemp     = data.main.temp - 273.15; // minus Kelvin difference
         condition = data.weather[0].description;
         windDir   = data.wind.deg;
@@ -223,6 +222,7 @@ $(document).ready(function () {
     function queryWeather() {
         if (address === null) { return; }
         var source = (
+            'https://cors-anywhere.herokuapp.com/' +
             'http://api.openweathermap.org/data/2.5/weather?lat=' +
             latitude +
             '&lon=' +
@@ -243,8 +243,8 @@ $(document).ready(function () {
                     displayPartition('#result_div');
                 },
             error    :
-                function (data) {
-                   alert('ERROR:\n', data);
+                function (xhr, status, error) {
+                   alert('ERROR:\n', xhr, status, error);
                 }
         });
     }//======================================================================//
